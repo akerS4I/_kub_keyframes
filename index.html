@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>куб ебать</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cube">
+        <div data="front" class="side front">front</div>
+        <div data="back" class="side back">back</div>
+        <div data="right" class="side right">right</div>
+        <div data="left" class="side left">left</div>
+        <div data="top" class="side top">top</div>
+        <div data="bottom" class="side bottom">bottom</div>
+      </div>
+    </div>
+    <script>
+      let alish = document.querySelectorAll(".side"),
+          cube = document.querySelector(".cube");
+          for (let i = 0; i < alish.length; i++) {
+            cube.addEventListener("mouseenter", () => {
+              alish[i].innerHTML = "alish=lox";
+            });
+            cube.addEventListener("mouseleave", () => {
+              alish[i].innerHTML = alish[i].getAttribute('data').toString();
+            });
+          }
+    </script>
+  </body>
+</html>
